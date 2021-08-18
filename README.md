@@ -87,6 +87,6 @@ Remember, if you're looking for feedback on your solution, be sure to ask questi
 ## Author
 
 - Website - [pigoat](https://www.pigoat.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/avatarfreak)
+- Frontend Mentor - [@avatarfreak](https://www.frontendmentor.io/profile/avatarfreak)
 
 **Have fun building!** 🚀
