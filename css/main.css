@@ -2,6 +2,11 @@
 :root {
   --clr-primary-100: hsl(240, 18%, 77%);
   --clr-primary-110: hsl(240, 38%, 20%);
+
+  --fs-size-sm: 0.875rem;
+  --fs-size-md: 1.125rem;
+  --fs-size-lg: 2rem;
+
   --fw-weight-thin: 300;
   --fw-weight-medium: 500;
   --fw-weight-bold: 700;
@@ -16,8 +21,10 @@
 }
 body {
   margin: 0 auto;
-  min-height: 100vh;
+  height: 100%;
   font-family: "Inter", sans-serif;
+  font-size: var(--fs-size-sm);
+  text-align: center;
 }
 
 img {
@@ -29,9 +36,135 @@ a {
   text-decoration: none;
 }
 
-ul {
-  list-style-type: none;
+figure {
+  position: relative;
+  margin-bottom: 5rem;
+  margin-top: 3rem;
+  height: 100vh;
 }
+
+figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -2rem;
+  background: url("../images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 328px;
+  height: 308px;
+  z-index: -1;
+}
+
+figure::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -1.9rem;
+  background: url("../images/pattern-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 327px;
+  height: 308px;
+  z-index: -1;
+}
+
+figure::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5rem;
+  background: url("../images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 287px;
+  height: 72px;
+  z-index: -1;
+}
+
+.slider-img {
+  display: inline-block;
+  width: 252px;
+  height: 254px;
+  box-shadow: 0 20px 50px hsla(240, 37%, 20%, 0.3);
+  border-radius: 5px;
+}
+
+.box {
+  position: relative;
+}
+
+button {
+  margin: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.direction {
+  width: 80px;
+  height: 40px;
+  background: #fff;
+  border-radius: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: -1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+blockquote {
+  margin-top: 5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  position: relative;
+}
+
+blockquote::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../images/pattern-quotes.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60px;
+  width: 50px;
+}
+
+blockquote p {
+  font-size: var(--fs-size-md);
+  line-height: 1.5;
+  font-weight: var(--fw-weight-thin);
+  color: var(--clr-primary-110);
+}
+
+cite {
+  font-style: normal;
+  display: block;
+  font-size: var(--fs-size-md);
+  letter-spacing: 0.7px;
+}
+
+cite.name {
+  font-weight: var(--fw-weight-bold);
+  margin-top: 2rem;
+}
+
+cite.designation {
+  color: var(--clr-primary-100);
+  font-weight: var(--fw-weight-medium);
+  padding: 0.5rem;
+}
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
