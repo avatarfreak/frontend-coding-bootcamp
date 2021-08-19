@@ -44,6 +44,7 @@ prev.addEventListener("click", () => {
 
 function view() {
   slider.setAttribute("src", `images/${testimonials[idx].img}`);
+  slider.setAttribute("alt", `${testimonials[idx].author}`);
   quote.textContent = `${testimonials[idx].quote}`;
   author.textContent = `${testimonials[idx].author}`;
   designation.textContent = `${testimonials[idx].designee}`;
